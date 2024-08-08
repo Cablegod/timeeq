@@ -1,0 +1,504 @@
+{
+  "Common": {
+    "True": "true",
+    "False": "false",
+    "New": "New",
+    "Save": "Save",
+    "Close": "Close",
+    "Cancel": "Cancel",
+    "Delete": "Delete",
+    "Edit": "Edit",
+    "Action": "Action",
+    "Expand": "Expand",
+    "Collapse": "Collapse",
+    "Details": "Details",
+    "Yes": "Yes",
+    "No": "No",
+    "Total": "Total",
+    "Optional": "optional",
+    "OptionalShort": "opt."
+  },
+  "Language": {
+    "Title": "Language",
+    "de": "German",
+    "en": "English"
+  },
+  "Abbreviations": {
+    "Hours": "h",
+    "Minutes": "m",
+    "Days": "days",
+    "CalendarWeek": "CW"
+  },
+  "Page": {
+    "Timesheet": {
+      "Title": "Timesheet",
+      "ShowDetails": "Show details",
+      "New": "New entry",
+      "Edit": "Edit entry",
+      "Start": "Start",
+      "Delete": "Delete entry",
+      "DeleteMessage": "Are you sure you want to delete this entry? This cannot be undone.",
+      "OmittedEntities": "{$OMITTED} additional entries are omitted to avoid performance problems."
+    },
+    "Chart": {
+      "Title": "Charts",
+      "Common": {
+        "Worked": "Worked",
+        "Planned": "Planned",
+        "Left": "Left",
+        "OverbookedBy": "Overbooked by",
+        "DaysWorked": "Days worked",
+        "DaysPlanned": "Days planned",
+        "DaysLeft": "Days left",
+        "PercentageOfTotalTime": "Percentage of total time",
+        "Percentage": "%",
+        "PartialPlannedValues": "The order period is greater than selected period. The values are displayed proportionally."
+      },
+      "Customers": {
+        "Title": "Planned / actual by customer",
+        "NoCustomerOverbooked": "No customer overbooked",
+        "CustomerOverbooked": "{$COUNT} customer overbooked",
+        "CustomersOverbooked": "{$COUNT} customers overbooked"
+      },
+      "Orders": {
+        "Title": "Planned / actual by order",
+        "NoOrderOverbooked": "No order overbooked",
+        "OrderOverbooked": "{$COUNT} order overbooked",
+        "OrdersOverbooked": "{$COUNT} orders overbooked"
+      },
+      "Projects": {
+        "Title": "By project"
+      },
+      "Activities": {
+        "Title": "By activity"
+      },
+      "Issues": {
+        "Title": "By issue"
+      }
+    },
+    "Report": {
+      "Title": "Reports",
+      "Activity": {
+        "Title": "Activity report",
+        "TitleDaily": "Activity report",
+        "TitleDetailed": "Activity report (detailed)",
+        "Company": "Company",
+        "Department": "Department",
+        "Contact": "Contact",
+        "ServiceProvider": "Service Provider",
+        "Id": "Id",
+        "StartDate": "From",
+        "EndDate": "To",
+        "Comment": "Comment",
+        "Issue": "Issue",
+        "Customer": "Customer",
+        "Project": "Project",
+        "WithoutProject": "Without project reference",
+        "Activity": "Activity",
+        "Order": "Order",
+        "OrderNumber": "Order number",
+        "Billable": "Billable",
+        "Period": "Period",
+        "Duration": "Duration",
+        "Hours": "hours",
+        "Total": "Total",
+        "ServiceConfirmation": "Confirmation of service",
+        "Preview": "Preview",
+        "PreviewPages": "{$PAGES} of {$TOTAL} pages",
+        "NoActivityReports": "No activity reports available",
+        "Download": "Download"
+      },
+      "ActivityOverview": {
+        "Title": "Overview",
+        "Customer": "Customer",
+        "WorkedTime": "Worked time",
+        "Revenue": "Revenue",
+        "Download": "Download",
+        "ActivityReport": "Activity report",
+        "ActivityReportDetailed": "Detailed"
+      }
+    },
+    "MasterData": {
+      "Title": "Master data",
+      "Customers": {
+        "Title": "Customers",
+        "New": "New customer",
+        "Edit": "Edit customer",
+        "Delete": "Delete customer",
+        "DeleteMessage": "Are you sure you want to delete this customer? This cannot be undone."
+      },
+      "Projects": {
+        "Title": "Projects",
+        "New": "New project",
+        "Edit": "Edit project",
+        "Delete": "Delete project",
+        "DeleteMessage": "Are you sure you want to delete this project? This cannot be undone."
+      },
+      "Activities": {
+        "Title": "Activities",
+        "New": "New activity",
+        "Edit": "Edit activity",
+        "Delete": "Delete activity",
+        "DeleteMessage": "Are you sure you want to delete this activity? This cannot be undone."
+      },
+      "Orders": {
+        "Title": "Orders",
+        "New": "New order",
+        "Edit": "Edit order",
+        "Delete": "Delete order",
+        "DeleteMessage": "Are you sure you want to delete this order? This cannot be undone."
+      },
+      "Holidays": {
+        "Title": "Holidays",
+        "New": "New holiday",
+        "Import": "Import",
+        "Edit": "Edit holiday",
+        "Delete": "Delete holiday",
+        "DeleteMessage": "Are you sure you want to delete this holiday? This cannot be undone."
+      }
+    },
+    "Administration": {
+      "Title": "Administration",
+      "Settings": {
+        "Title": "Settings",
+        "WorkTime": "Work time",
+        "Workdays": "Workdays",
+        "TimeZone": "Time zone",
+        "Company": "Company",
+        "LogoPreview": "Preview"
+      },
+      "Users": {
+        "Title": "Users",
+        "New": "New user",
+        "Edit": "Edit user",
+        "Delete": "Delete user",
+        "DeleteMessage": "Are you sure you want to delete this user? This cannot be undone.",
+        "PermissionGroups": {
+          "data": "Data",
+          "time-sheet": "Time sheet",
+          "chart": "Chart",
+          "master-data": "Master data",
+          "report": "Report",
+          "administration": "Administration"
+        },
+        "Permissions": {
+          "foreign-data": "Data from other users",
+          "time-sheet": "Times",
+          "charts-by-customer": "Planned / actual by customer",
+          "charts-by-order": "Planned / actual by order",
+          "charts-by-project": "By project",
+          "charts-by-activity": "By activity",
+          "charts-by-issue": "By issue",
+          "report-activity-summary": "Activity report",
+          "report-activity-detail": "Detailed activity report",
+          "report-activity-raw-data": "Raw data",
+          "master-data-customers": "Customers",
+          "master-data-projects": "Projects",
+          "master-data-activities": "Activities",
+          "master-data-orders": "Orders",
+          "master-data-holidays": "Holidays",
+          "administration-users": "Users",
+          "administration-settings": "Settings",
+          "administration-maintenance": "Maintenance"
+        }
+      }
+    }
+  },
+  "Component": {
+    "Header": {
+      "NoDays": "no",
+      "DaysWorked": "days worked",
+      "Workdays": "working days",
+      "VacationDays": "vacation days",
+      "PastDays": "past {$COUNT} days",
+      "PastWeeks": "past {$COUNT} weeks",
+      "PastMonths": "past {$COUNT} months",
+      "PastYears": "past {$COUNT} years"
+    },
+    "Authorization": {
+      "Login": "Login",
+      "Logout": "Logout",
+      "UserAccount": "User account"
+    },
+    "Filter": {
+      "Title": "Settings & Filter",
+      "Add": "Add filter",
+      "Apply": "Apply filter",
+      "Reset": "Reset filter",
+      "LimitPeriod": "Limit period",
+      "From": "from",
+      "To": "to",
+      "Start": "Start",
+      "End": "End",
+      "Customer": "Customer",
+      "CustomerNumber": "Number",
+      "CustomerCompanyName": "Company",
+      "Project": "Project",
+      "Activity": "Activity",
+      "Order": "Order",
+      "HolidayTitle": "Title",
+      "HolidayType": "Type",
+      "Issue": "Issue",
+      "Comment": "Comment",
+      "Hidden": "Hidden",
+      "Billable": "Billable",
+      "Username": "Username",
+      "FirstName": "First name",
+      "LastName": "Last name",
+      "Email": "Email"
+    },
+    "NgSelect": {
+      "AddTagText": "Add item",
+      "LoadingText": "Loading...",
+      "ClearAllText": "Clear all",
+      "NotFoundText": "No items found",
+      "TypeToSearchText": "Type to search"
+    },
+    "ChartTotals": {
+      "OfDays": "of {$OFDAYS}",
+      "OfTotalTime": "of total time",
+      "DaysWorked": "days worked",
+      "DaysPlanned": "days planned",
+      "DaysPlannedLeft": "planned days left",
+      "WorkdaysLeft": "workdays left",
+      "PinTableRow": "Please pin a row in the grid!",
+      "Worked": "Worked",
+      "Planned": "Planned",
+      "Left": "Left",
+      "Percentage": "%",
+      "Other": "Other"
+    }
+  },
+  "Enum": {
+    "ErrorCode": {
+      "Unknown": "An unknown error has occurred",
+      "BadRequest": null,
+      "Unauthorized": "Access to data requires authentication",
+      "Forbidden": "Access to data is not authorized",
+      "NotFound": "The record could not be found",
+      "Conflict": null,
+      "InternalServerError": "An internal server error has occurred",
+      "BadRequestConformityViolation": "The record does not match it's conformity rules",
+      "ForbiddenForeignUserData": "Access to data of other users is not authorized",
+      "ConflictForeignKeyViolation": "The operation conflicts with other data",
+      "ConflictForeignKeyViolationOnDelete": "The record could not be deleted because other data depend on it",
+      "ConflictActivityAlreadyAssignedToDifferentCustomers": "Activity is already assigned to time sheets with different customers",
+      "ConflictActivityAlreadyAssignedToDifferentProjects": "Activity is already assigned to time sheets with different projects",
+      "ConflictUserWithSameUsernameExists": "A user with same user name or email address already exists",
+      "ConflictUserNotAllowedToDeleteItself": "A user is not allowed to delete itself.",
+      "ConflictUserNotAllowedToRemoveUserEditPermissionFromItself": "A user is not allowed to remove the permission to edit user from itself."
+    },
+    "HolidayType": {
+      "Holiday": "Holidays / Vacation",
+      "PublicHoliday": "Public holiday"
+    },
+    "PermissionScope": {
+      "None": "None",
+      "View": "Display",
+      "Manage": "Manage"
+    }
+  },
+  "DTO": {
+    "TimeSheetDto": {
+      "StartDate": "Start date",
+      "StartTime": "Start time",
+      "EndDate": "End date",
+      "EndTime": "End time",
+      "Start": "Start",
+      "End": "End",
+      "CustomerId": "Customer",
+      "CustomerIdPlaceholder": "Select customer",
+      "ProjectId": "Project",
+      "ProjectIdPlaceholder": "Select project",
+      "ActivityId": "Activity",
+      "ActivityIdPlaceholder": "Select activity",
+      "OrderId": "Order",
+      "Issue": "Issue",
+      "UserId": "User",
+      "UserIdPlaceholder": "Select user",
+      "Billable": "Billable",
+      "Comment": "Comment"
+    },
+    "TimeSheetGridDto": {
+      "Date": "Date",
+      "Time": "Time",
+      "StartDate": "From",
+      "EndDate": "To",
+      "Now": "now",
+      "Duration": "Duration",
+      "Customer": "Customer",
+      "Project": "Project",
+      "Activity": "Activity",
+      "Billable": "Billable",
+      "Issue": "Issue",
+      "Comment": "Comment"
+    },
+    "CustomerDto": {
+      "Title": "Title",
+      "TitlePlaceholder": "Customer name",
+      "Number": "Customer number",
+      "CompanyName": "Company",
+      "Department": "Department",
+      "Street": "Street",
+      "ZipCode": "Zip",
+      "City": "City",
+      "Country": "Country",
+      "ContactName": "Contact",
+      "HourlyRate": "Hourly rate",
+      "Comment": "Comment",
+      "Hidden": "Hidden"
+    },
+    "CustomerGridDto": {
+      "Title": "Title",
+      "CompanyName": "Company",
+      "ContactName": "Contact",
+      "Hidden": "Hidden"
+    },
+    "ProjectDto": {
+      "Title": "Title",
+      "TitlePlaceholder": "Project title",
+      "CustomerId": "Customer",
+      "CustomerIdPlaceholder": "Select customer",
+      "Comment": "Comment",
+      "Hidden": "Hidden"
+    },
+    "ProjectGridDto": {
+      "Title": "Title",
+      "CustomerTitle": "Customer",
+      "Hidden": "Hidden"
+    },
+    "ActivityDto": {
+      "Title": "Title",
+      "TitlePlaceholder": "Activity name",
+      "CustomerId": "Customer",
+      "Customer": "Customer",
+      "ProjectId": "Project",
+      "Project": "Project",
+      "Comment": "Comment",
+      "Hidden": "Hidden"
+    },
+    "ActivityGridDto": {
+      "Title": "Title",
+      "ProjectTitle": "Project",
+      "CustomerTitle": "Customer"
+    },
+    "OrderDto": {
+      "Title": "Title",
+      "TitlePlaceholder": "Order title",
+      "Description": "Description",
+      "Number": "Order number",
+      "CustomerId": "Customer",
+      "CustomerIdPlaceholder": "Select customer",
+      "StartDate": "Start date",
+      "StartDatePlaceholder": "Begin",
+      "DueDate": "Due date",
+      "DueDatePlaceholder": "Due",
+      "HourlyRate": "Hourly rate",
+      "Budget": "Budget",
+      "Comment": "Comment",
+      "Hidden": "Hidden"
+    },
+    "OrderGridDto": {
+      "Title": "Title",
+      "CustomerTitle": "Customer",
+      "StartDate": "Start date",
+      "DueDate": "Due date",
+      "Hidden": "Hidden"
+    },
+    "WorkTimeDto": {
+      "OrderTitle": "Order",
+      "OrderNumber": "Order number",
+      "CustomerTitle": "Customer",
+      "ProjectTitle": "Project",
+      "ActivityTitle": "Activity",
+      "Issue": "Issue",
+      "DaysWorked": "Days worked",
+      "DaysPlanned": "Days planned",
+      "DaysDifference": "Days difference",
+      "TimeWorked": "Time worked",
+      "TimePlanned": "Time planned",
+      "TimeDifference": "Time difference",
+      "BudgetWorked": "Budget used",
+      "BudgetPlanned": "Budget planned",
+      "BudgetDifference": "Budget left",
+      "TotalWorkedPercentage": "worked %",
+      "TotalPlannedPercentage": "planned %",
+      "PlannedStart": "Planned from",
+      "PlannedEnd": "Planned to",
+      "OrderPeriod": "Order period",
+      "HourlyRate": "Hourly rate",
+      "Currency": "Currency"
+    },
+    "HolidayDto": {
+      "Title": "Title",
+      "TitlePlaceholder": "Title",
+      "StartDate": "Start date",
+      "StartDatePlaceholder": "Begin",
+      "EndDate": "End date",
+      "EndDatePlaceholder": "End",
+      "Type": "Type",
+      "UserId": "Benutzer"
+    },
+    "HolidayGridDto": {
+      "Title": "Title",
+      "StartDate": "Start date",
+      "EndDate": "End date",
+      "Type": "Type",
+      "Username": "User"
+    },
+    "HolidayImportDto": {
+      "File": "iCal file",
+      "Type": "Type"
+    },
+    "UserDto": {
+      "Username": "Username",
+      "FirstName": "First name",
+      "LastName": "Last name",
+      "Email": "Email",
+      "Enabled": "Enabled",
+      "Password": "Password",
+      "ConfirmPassword": "Confirm password",
+      "Permissions": "Permissions",
+      "Scope": "Scope",
+      "RestrictToCustomerIds": "Restrict to customers"
+    },
+    "SettingDto": {
+      "WorkHoursPerWorkday": "Working hours / workday",
+      "WorkHoursPerWorkdayDate": "Working hours / workday",
+      "Monday": "Monday",
+      "Tuesday": "Tuesday",
+      "Wednesday": "Wednesday",
+      "Thursday": "Thursday",
+      "Friday": "Friday",
+      "Saturday": "Saturday",
+      "Sunday": "Sunday",
+      "ClientTimeZoneId": "Client time zone",
+      "ClientTimeZoneIdPlaceholder": "Select client time zone",
+      "Company": "Company name",
+      "Department": "Department",
+      "ServiceProvider": "Provider name",
+      "Currency": "Currency",
+      "Street": "Street",
+      "AddressAddition": "Additional address information",
+      "ZipCode": "Zip code",
+      "City": "City",
+      "Country": "Country",
+      "Logo": "Logo"
+    }
+  },
+  "Validation": {
+    "RequiredWithField": "'{$FIELDNAME}' is required",
+    "InvalidWithField": "'{$FIELDNAME}' is invalid",
+    "MinLengthWithField": "'{$FIELDNAME}' must be at least {$VALUE} characters",
+    "MaxLengthWithField": "'{$FIELDNAME}' must not have more than {$VALUE} characters",
+    "MinWithField": "'{$FIELDNAME}' must be greater or equal to {$VALUE}",
+    "MaxWithField": "'{$FIELDNAME}' must be lower or equal to {$VALUE}",
+    "CompareWithField": "'{$FIELDNAME}' and '{$OTHERFIELDNAME}' does not match",
+    "CompareToEqualWithField": "'{$FIELDNAME}' and '{$OTHERFIELDNAME}' must be equal",
+    "CompareToNotEqualWithField": "'{$FIELDNAME}' and '{$OTHERFIELDNAME}' must not be equal",
+    "CompareToLessThanWithField": "'{$FIELDNAME}' must be less than '{$OTHERFIELDNAME}'",
+    "CompareToLessThanOrEqualWithField": "'{$FIELDNAME}' must be less or equal than '{$OTHERFIELDNAME}'",
+    "CompareToGreaterThanWithField": "'{$FIELDNAME}' must be grater than '{$OTHERFIELDNAME}'",
+    "CompareToGreaterThanOrEqualWithField": "'{$FIELDNAME}' must be greater or equal than '{$OTHERFIELDNAME}'"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "TimeTracking": {
+    "Features": {
+      // Enable authorization
+      "Authorization": false,
+      // Enable reporting
+      "Reporting": false
+    },
+    "Database": {
+      "Type": "Sqlite",
+      "ConnectionString": "Data Source=database/TimeTracking.sqlite"
+
+      //"Type": "SqlServer",
+      //"ConnectionString": "Data Source=<server>;Initial Catalog=<database>;User ID=<user>;Password=<password>;Persist Security Info=True;TrustServerCertificate=True"
+
+      //"Type": "PostgreSql",
+      //"ConnectionString": "Server=<server>;Database=<database>;User Id=<user>;Password=<password>;"
+
+      //"Type": "MySql",
+      //"ConnectionString": "Server=<server>;Database=<database>;User=<user>;Password=<password>;"
+    },
+    "Reporting": {
+      // The base URL of the report server
+      "ReportServerBaseUrl": "http://localhost:5010"
+    },
+    "Keycloak": {
+      // The URL of the Keycloak server
+      "AuthServerUrl": "https://URL/to/Keykloak",
+      // The realm to use
+      "Realm": "<Realm>",
+      // The client id of the backend application
+      "ClientId": "<Front-end client id>",
+      "SslRequired": true,
+      "VerifyTokenAudience": true,
+      // Creates the realm if it does not exist
+      "CreateRealm": false,
+      // The username of the admin user to create the realm, clients and users
+      "AdminUser": null,
+      // The password of the admin user to create the realm, clients and users
+      "AdminPassword": null
+    },
+    "DataReset": {
+      // Enable periodic database reset for demo purposes
+      "Enabled": false,
+      // Run database reset by cron job expression. See https://crontab.guru/ for details
+      "CronJobSchedule": "0 6 * * *", // Every day at 6:00
+      // Path to exported data file to import on database reset
+      "TestDatabaseSource": "",
+      // Update timestamps to current time on database reset
+      "AdjustTimeStamps": true
+    }
+  },
+  "Kestrel": {
+    "EndPoints": {
+      "HttpAnyAddress": {
+        "Url": "http://*:5000"
+      }
+      //"HttpsCertFile": {
+      //  "Url": "https://fully.qualified.name:5000",
+      //  "Certificate": {
+      //    "Path": "<AbsolutePath>\\home.f-schick.de.pfx",
+      //    "Password": "<Password>"
+      //  }
+      //},
+      //"HttpsUserCertStore": {
+      //  "Url": "https://fully.qualified.name:5000",
+      //  "Certificate": {
+      //    "Subject": "*.home.f-schick.de",
+      //    "Store": "My",
+      //    "Location": "CurrentUser",
+      //    "AllowInvalid": "false" // Set to true to allow invalid certificates (e.g. self-signed)
+      //  }
+      //},
+      //"HttpsMachineCertStore": {
+      //  "Url": "https://fully.qualified.name:5000",
+      //  "Certificate": {
+      //    "Subject": "*.home.f-schick.de",
+      //    "Store": "WebHosting",
+      //    "Location": "LocalMachine",
+      //    "AllowInvalid": "false" // Set to true to allow invalid certificates (e.g. self-signed)
+      //  }
+      //}
+    }
+  },
+  "AllowedHosts": "*"
+}

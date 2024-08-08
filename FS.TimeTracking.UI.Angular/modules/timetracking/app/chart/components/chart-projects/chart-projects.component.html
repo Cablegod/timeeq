@@ -1,0 +1,71 @@
+<div class="row">
+  <!-- Chart -->
+  <div class="col-12 col-md-8 col-xl-9 order-last order-md-first px-4">
+    <ng-container *ngTemplateOutlet="chart"></ng-container>
+  </div>
+  <div class="col-12 col-md-4 col-xl-3 order-first order-md-last ps-md-2 ps-lg-5 pb-5 pb-md-0 filter">
+    <!-- Filter -->
+    <ts-filter filterId="filterCharts"
+               [filters]="filters">
+    </ts-filter>
+  </div>
+</div>
+
+<ng-template #chart>
+  <h4 class="d-inline-block" i18n="@@Page.Chart.Projects.Title">
+    [i18n] By project
+  </h4>
+  <div id="chart" *ngIf="chartSeries">
+    <apx-chart
+      [series]="chartSeries"
+      [chart]="chartOptions.chart"
+      [xaxis]="chartOptions.xAxis"
+      [yaxis]="chartOptions.yAxis"
+      [colors]="chartOptions.colors"
+      [plotOptions]="chartOptions.plotOptions"
+      [fill]="chartOptions.fill"
+      [grid]="chartOptions.grid"
+      [states]="chartOptions.states"
+      [dataLabels]="chartOptions.dataLabels"
+      [tooltip]="chartOptions.tooltip"
+      [legend]="chartOptions.legend">
+    </apx-chart>
+  </div>
+
+  <ts-simple-table
+    [columns]="tableColumns"
+    [rows]="tableRows"
+    [configuration]="tableConfiguration"
+    (rowsChanged)="tableRowsChanged($event.rows)">
+  </ts-simple-table>
+</ng-template>
+
+<ng-template #infoCellTemplate let-row="row">
+  <a class="text-secondary ms-2"
+     [ngbPopover]="infoDetailPopover"
+     [autoClose]="'outside'"
+     popoverClass="popup-full-width">
+    <svg class="bi action-icon" fill="currentColor">
+      <use xlink:href="assets/icons.svg#info-circle"/>
+    </svg>
+  </a>
+
+  <ng-template #infoDetailPopover>
+    <table class="table table-borderless table-popover">
+      <tbody>
+      <tr>
+        <th colspan="3" class="pt-1" i18n="@@Page.Chart.Common.Worked">[i18n] Worked</th>
+      </tr>
+      <tr>
+        <td>{{formatService.formatDays(row.daysWorked)}} {{LOCALIZED_DAYS}}</td>
+        <td>{{row.timeWorked | tsDuration}}</td>
+        <td>{{formatService.formatBudget(row.budgetWorked)}} {{row.currency}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </ng-template>
+</ng-template>
+
+<ng-template #infoFooterTemplate>
+  <ng-container *ngTemplateOutlet="infoCellTemplate; context: {row: tableFooter}"></ng-container>
+</ng-template>

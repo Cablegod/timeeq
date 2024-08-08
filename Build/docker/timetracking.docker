@@ -1,0 +1,32 @@
+FROM schicksoftware/dotnet8.0-jre17-nodejs20.0:latest AS build
+ARG CI_PROJECT_NAME
+ARG CI_COMMIT_REF_NAME
+COPY / .
+RUN pwsh -Command Build/scripts/timetracking.publish.ps1 -version "${CI_COMMIT_REF_NAME}" -publshFolder "${CI_PROJECT_NAME}-${CI_COMMIT_REF_NAME}"
+
+FROM mcr.microsoft.com/dotnet/aspnet:8.0-bookworm-slim AS base
+ARG CI_PROJECT_NAME
+ARG CI_COMMIT_REF_NAME
+
+RUN adduser \
+  --disabled-password \
+  --home /opt/timetracking \
+  --gecos '' timetracking \
+  && chown -R timetracking /opt/timetracking \
+  && mkdir -p /var/timetracking \
+  && chown -R timetracking /var/timetracking
+
+USER timetracking
+
+WORKDIR /opt/timetracking
+
+COPY --from=build ./${CI_PROJECT_NAME}-${CI_COMMIT_REF_NAME} .
+
+ENV \
+  DOTNET_RUNNING_IN_CONTAINER=true \
+  DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false \
+  ASPNETCORE_URLS=http://+:5000
+
+EXPOSE 5000
+
+ENTRYPOINT ["dotnet", "FS.TimeTracking.dll"]

@@ -1,0 +1,470 @@
+﻿@import "./variables";
+
+/* ----------------------------------------- */
+/* Form labels
+/* ----------------------------------------- */
+.form-label {
+  color: $gray-800;
+  font-size: 0.875rem;
+  font-weight: $font-weight-bold;
+}
+
+/* ----------------------------------------- */
+/* Form controls
+/* ----------------------------------------- */
+.form-control {
+  caret-color: $primary-500;
+
+  &:focus {
+    @include focused-border;
+  }
+
+  &::placeholder {
+    color: $gray-500;
+  }
+}
+
+/* ----------------------------------------- */
+/* Modal
+/* ----------------------------------------- */
+.modal-open {
+  main, header, aside, footer {
+    filter: blur(3px);
+  }
+}
+
+.modal-header {
+  border-top: 0.35rem solid $primary;
+}
+
+.modal-body {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.modal-footer {
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
+}
+
+.modal-close {
+  color: $gray-600;
+  padding: 0;
+
+  &:focus, &:active {
+    box-shadow: none;
+  }
+}
+
+/* ----------------------------------------- */
+/* Check boxes
+/* ----------------------------------------- */
+.form-check-input[type=checkbox] {
+  width: 1.125em;
+  height: 1.125em;
+  border-color: $gray-200;
+  border-radius: 0.3em;
+  background-color: $gray-100;
+
+  &:hover {
+    border-color: $primary-300;
+    background-color: $green-100;
+  }
+
+  &:focus {
+    border-color: $primary-300;
+    background-color: $green-100;
+    box-shadow: 0 0 8px 1px rgba(19, 136, 66, 0.3);
+  }
+}
+
+.form-check-input:checked {
+  background-color: $primary-500;
+  border: none;
+  box-shadow: none;
+
+  &:hover,
+  &:hover:focus {
+    background-color: $primary-600;
+  }
+
+  &:focus {
+    background-color: $primary-500;
+  }
+}
+
+/* ----------------------------------------- */
+/* Switches
+/* ----------------------------------------- */
+.form-switch .form-check-input[type=checkbox] {
+  width: 2.125em;
+  height: 1.125em;
+  border: 2px solid $gray-200;
+  box-shadow: inset 0 2px 3px 0 rgba(0, 0, 0, 5%);
+
+  &:hover {
+    background-color: $primary-100;
+    background-image: escape-svg($form-switch-focus-bg-image);
+    border-color: $primary-300;
+    box-shadow: inset 0 2px 3px 0 rgba(0, 0, 0, 5%);
+  }
+
+  &:focus {
+    background-color: $primary-100;
+    background-image: escape-svg($form-switch-focus-bg-image);
+    border-color: $primary-300;
+    box-shadow: 0 0 8px 1px rgba(19, 136, 66, 0.3);
+  }
+
+  &:checked {
+    border-color: $primary-500;
+  }
+
+  &:checked:hover {
+    background-color: $primary-500;
+    background-image: escape-svg($form-switch-checked-bg-image);
+    box-shadow: 0 0 8px 1px rgba(19, 136, 66, 0.3);
+  }
+
+  &:checked:focus {
+    background-color: $primary-500;
+    background-image: escape-svg($form-switch-checked-bg-image);
+  }
+}
+
+/* ----------------------------------------- */
+/* Primary button
+/* ----------------------------------------- */
+.btn-primary {
+  color: $white;
+  border-width: 0;
+
+  &:focus {
+    color: $white;
+    box-shadow: none;
+    background-color: $primary-500;
+  }
+
+  &:hover {
+    color: $white;
+    background-color: $primary-700;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  &:active {
+    color: $white;
+    background-color: $primary-800;
+    box-shadow: inset 0 3px 12px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  &:active:focus {
+    box-shadow: none;
+  }
+
+  &:disabled, &.disabled {
+    color: $gray-700;
+    background-color: $gray-200;
+  }
+}
+
+/* ----------------------------------------- */
+/* Secondary button
+/* ----------------------------------------- */
+.btn-outline-secondary {
+  $border-width: 2px;
+  color: $primary-500;
+  border: $border-width solid $primary-500;
+
+  &:not(.btn-sm) {
+    padding: calc(#{$btn-padding-y} - #{$border-width}) calc(#{$btn-padding-x} - #{$border-width});
+  }
+
+  &:focus {
+    color: $primary-500;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  &:hover {
+    color: $primary-600;
+    background-color: $primary-100;
+    border: $border-width solid $primary-600;
+  }
+
+  &:active {
+    color: $primary-800;
+    background-color: $primary-100;
+    border: $border-width solid $primary-800;
+  }
+
+  &:active:focus {
+    box-shadow: none;
+  }
+
+  &:disabled, &.disabled {
+    color: $gray-700;
+    background-color: $gray-200;
+  }
+}
+
+/* ----------------------------------------- */
+/* Tertiary button
+/* ----------------------------------------- */
+.btn-secondary {
+  color: $primary-500;
+  background-color: $gray-100;
+  border-width: 0;
+
+  &:focus {
+    color: $primary-500;
+    box-shadow: none;
+    background-color: $gray-100;
+  }
+
+  &:hover {
+    color: $primary-600;
+    background-color: $primary-100;
+  }
+
+  &:active {
+    color: $primary-800;
+    background-color: $primary-100;
+  }
+
+  &:active:focus {
+    box-shadow: none;
+  }
+
+  &:disabled, &.disabled {
+    color: $gray-700;
+    background-color: $gray-200;
+  }
+}
+
+/* ----------------------------------------- */
+/* Alerts
+/* ----------------------------------------- */
+.alert {
+  font-weight: $font-weight-bold;
+  text-align: center;
+
+  &.alert-warning {
+    color: $warning-700;
+    background-color: $warning-100;
+    border-color: $warning-700;
+  }
+}
+
+/* ----------------------------------------- */
+/* Tables
+/* ----------------------------------------- */
+.table {
+  th {
+    color: $gray-600;
+  }
+
+  > :not(:first-child) {
+    border-top: inherit;
+  }
+
+  > :not(caption) > * > * {
+    border-bottom-width: inherit;
+  }
+
+  tbody tr {
+    border-top: 1px solid $gray-200;
+  }
+
+  &.table-borderless tbody tr:not(:last-child) {
+    border-bottom: inherit;
+  }
+
+  tr.selected {
+    background-color: $primary-100;
+  }
+
+  tfoot {
+    color: $green-900;
+    background-color: $gray-100;
+  }
+}
+
+.table-popover {
+  margin: inherit;
+
+  tbody tr {
+    border-top: inherit;
+  }
+
+  th, td {
+    padding: 0;
+  }
+
+  td {
+    text-align: end;
+    line-height: 1.2rem;
+
+    &:not(:last-child) {
+      padding-right: 1rem;
+    }
+  }
+}
+
+/* ----------------------------------------- */
+/* Charts
+/* ----------------------------------------- */
+.apexcharts-gridlines-horizontal {
+  line:last-child {
+    display: none;
+  }
+}
+
+.apexcharts-tooltip {
+  //opacity: 1 !important;
+  color: $gray-700;
+  padding: 1.125rem 1.25rem;
+  border: none !important;
+  background: #F3F3F3 !important;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25) !important;
+}
+
+.chart-legend {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 0.1875rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -.2rem;
+
+  &.worked {
+    background-color: $primary-500;
+  }
+
+  &.planned {
+    background-color: $primary-200;
+  }
+}
+
+/* ----------------------------------------- */
+/* Popover
+/* ----------------------------------------- */
+.popover-body {
+  table, table th {
+    color: $popover-body-color;
+  }
+}
+
+/* ----------------------------------------- */
+/* Date picker
+/* ----------------------------------------- */
+.datepicker {
+  padding: 0;
+  background: $gray-100 linear-gradient(180deg, $primary 0, $primary 5px, $primary-100 5px, $primary-100 50px, $gray-100 50px, $gray-100 100%);
+  border: 1px solid $gray-200;
+}
+
+.datepicker-dropdown {
+  &.datepicker-orient-top:after {
+    border-top-color: $gray-100;
+  }
+
+  &:after {
+    border-bottom-color: $primary;
+  }
+}
+
+.datepicker {
+  .datepicker-months,
+  .datepicker-years,
+  .datepicker-decades,
+  .datepicker-centuries {
+    .prev {
+      padding-right: 3.625rem !important;
+    }
+
+    .next {
+      padding-left: 3.625rem !important;
+    }
+
+    table tr th, table tr td {
+      width: 5.9375rem;
+
+      span {
+        height: 5.03125rem;
+        line-height: 5.03125rem;
+
+        &.active.active {
+          background-color: $primary;
+
+          &:hover {
+            background-color: $primary;
+          }
+        }
+
+        &:hover {
+          background-color: $primary-200;
+        }
+      }
+    }
+  }
+}
+
+.datepicker table {
+  .datepicker-switch, .next, .prev {
+    padding: .95rem 0 1.4rem 0;
+
+    &:hover {
+      background-color: inherit;
+      color: $primary-600;
+    }
+  }
+
+  .dow, .cw {
+    font-weight: bold;
+    color: $gray-600;
+  }
+
+  .dow {
+    font-size: .875rem;
+    text-transform: uppercase;
+  }
+
+  .cw {
+    font-size: .75rem;
+  }
+
+  td.old {
+    color: $gray-400 !important;
+  }
+
+  td.day:hover {
+    background-color: $primary-200 !important;
+  }
+
+  td.today {
+    border-color: transparent !important;
+    background-color: $primary-200 !important;
+  }
+
+  td.active {
+    border-color: transparent !important;
+    background-color: $primary !important;
+
+    &:hover {
+      background-color: $primary !important;
+    }
+  }
+
+  tbody td {
+    border: 1rem solid transparent;
+  }
+
+  tfoot th:hover {
+    background-color: inherit;
+    color: $primary-600;
+  }
+
+  tfoot tr:last-child {
+    border-bottom: 8px solid transparent;
+  }
+}

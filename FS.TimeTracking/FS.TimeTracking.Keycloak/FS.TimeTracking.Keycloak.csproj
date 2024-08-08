@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="../../Build/targets/net_core.props" />
+  <Import Project="../../Build/targets/version.props" />
+  <Import Project="../../Build/targets/xml_documentation.props" />
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.4" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Nito.AsyncEx.Coordination" Version="5.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FS.TimeTracking.Abstractions\FS.TimeTracking.Abstractions.csproj" />
+    <ProjectReference Include="..\FS.TimeTracking.Core\FS.TimeTracking.Core.csproj" />
+  </ItemGroup>
+
+</Project>

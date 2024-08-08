@@ -1,0 +1,72 @@
+/* ----------------------------------------- */
+/* Font
+/* ----------------------------------------- */
+@import "styles/fonts";
+
+/* ----------------------------------------- */
+/* Bootstrap + Icons
+/* ----------------------------------------- */
+//$enable-reduced-motion: false; // DEV only
+@import "styles/theme.overrides";
+@import "~bootstrap/scss/bootstrap";
+
+/* ----------------------------------------- */
+/* Custom extensions
+/* ----------------------------------------- */
+body {
+  background-image: url("assets/images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  //min-height: 5000px;
+}
+
+.container-fluid {
+  @include media-breakpoint-up(sm) {
+    padding: 0 5.5rem;
+  }
+}
+
+section {
+  padding-bottom: 6rem;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.number {
+  width: 2em;
+  height: 2em;
+  border: .1875rem solid $primary;
+  border-radius: 50%;
+  color: $primary;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1em;
+}
+
+.number-text {
+  height: 2em;
+}
+
+.code {
+  color: $white;
+  font-family: $font-family-code;
+  font-weight: bold;
+  background-color: #3F3F3F;
+  padding: 1rem;
+  box-shadow: 0 5px 15px 0 $gray-300;
+  border-radius: .625rem;
+  word-break: break-word;
+  font-size: 0.875em;
+}
+
+/* ----------------------------------------- */
+/* Bootstrap-icons
+/* ----------------------------------------- */
+.bi {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+}

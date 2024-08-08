@@ -1,0 +1,160 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{4F2876AD-723A-42E6-9FB3-CE1FB650866E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A5A54A2E-518C-4EF3-85F0-EE957DA73D79}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FS.TimeTracking", "FS.TimeTracking\FS.TimeTracking.csproj", "{AF93A262-D7EE-4072-A31A-2ED73E89F388}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FS.TimeTracking.Tests", "FS.TimeTracking.Tests\FS.TimeTracking.Tests.csproj", "{0CC83CFF-B4C9-4084-B465-7ACDB30BE66A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FS.TimeTracking.Api.REST", "FS.TimeTracking.Api.REST\FS.TimeTracking.Api.REST.csproj", "{D782C5A1-448F-404C-965D-2407DF585006}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FS.TimeTracking.Application", "FS.TimeTracking.Application\FS.TimeTracking.Application.csproj", "{A7309F57-C6D4-4AEA-BDF7-95443393A93B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FS.TimeTracking.Application.Tests", "FS.TimeTracking.Application.Tests\FS.TimeTracking.Application.Tests.csproj", "{D00442CC-5225-4F36-B4C4-A6CECF6A6FCE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FS.TimeTracking.Repository", "FS.TimeTracking.Repository\FS.TimeTracking.Repository.csproj", "{F5DEC073-72E6-4E5E-B036-A341F15E9866}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FS.TimeTracking.Repository.MySql", "FS.TimeTracking.Repository.MySql\FS.TimeTracking.Repository.MySql.csproj", "{4A5BB14C-4B55-45D9-9129-156EEE1AA7BB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FS.TimeTracking.Repository.PostgreSql", "FS.TimeTracking.Repository.PostgreSql\FS.TimeTracking.Repository.PostgreSql.csproj", "{57FB49AA-2C3F-4583-B2B8-CF92FC1B8161}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FS.TimeTracking.Repository.Sqlite", "FS.TimeTracking.Repository.Sqlite\FS.TimeTracking.Repository.Sqlite.csproj", "{9E9A7492-72BC-47B9-B1F4-8E485453C077}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FS.TimeTracking.Repository.SqlServer", "FS.TimeTracking.Repository.SqlServer\FS.TimeTracking.Repository.SqlServer.csproj", "{F2871F13-0E8F-4C0D-94E3-0500DE3B55B1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FS.TimeTracking.Repository.Tests", "FS.TimeTracking.Repository.Tests\FS.TimeTracking.Repository.Tests.csproj", "{2205F08B-B25B-4421-BF77-F0CF71190155}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FS.TimeTracking.Abstractions", "FS.TimeTracking.Abstractions\FS.TimeTracking.Abstractions.csproj", "{1B5F5086-3FB2-4C35-9DF7-789549261065}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FS.TimeTracking.Abstractions.Tests", "FS.TimeTracking.Abstractions.Tests\FS.TimeTracking.Abstractions.Tests.csproj", "{E4FD20E4-C582-46FD-8A37-D629A61BC5A1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FS.TimeTracking.Core", "FS.TimeTracking.Core\FS.TimeTracking.Core.csproj", "{EB90948D-4ED3-4615-AA3C-1072ABA06185}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FS.TimeTracking.Core.Tests", "FS.TimeTracking.Core.Tests\FS.TimeTracking.Core.Tests.csproj", "{2A2F6DFB-637D-41B5-9C11-D548EE12ADC1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "targets", "targets", "{4D7C624D-9B5A-4AA3-A63F-8775241D2EF0}"
+	ProjectSection(SolutionItems) = preProject
+		..\Build\targets\net_core.props = ..\Build\targets\net_core.props
+		..\Build\targets\tests.props = ..\Build\targets\tests.props
+		..\Build\targets\version.props = ..\Build\targets\version.props
+		..\Build\targets\xml_documentation.props = ..\Build\targets\xml_documentation.props
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FS.TimeTracking.Keycloak", "FS.TimeTracking.Keycloak\FS.TimeTracking.Keycloak.csproj", "{50A2E279-542E-4C00-BC1F-4EFFB9B9B27E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{2882B4C3-3E9C-4B84-91DA-9DD76DFEA969}"
+	ProjectSection(SolutionItems) = preProject
+		..\Build\services\linux.service.template = ..\Build\services\linux.service.template
+		..\Build\services\windows.service.install.bat = ..\Build\services\windows.service.install.bat
+		..\Build\services\windows.service.uninstall.bat = ..\Build\services\windows.service.uninstall.bat
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{DA46FC64-FEE4-44E9-A914-FF4DD9A4D6A8}"
+	ProjectSection(SolutionItems) = preProject
+		..\Build\scripts\build_server.build.ps1 = ..\Build\scripts\build_server.build.ps1
+		..\Build\scripts\timetracking.build.ps1 = ..\Build\scripts\timetracking.build.ps1
+		..\Build\scripts\timetracking.publish.ps1 = ..\Build\scripts\timetracking.publish.ps1
+		..\Build\scripts\timetracking.test.ps1 = ..\Build\scripts\timetracking.test.ps1
+		..\Build\scripts\_core.ps1 = ..\Build\scripts\_core.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{8596EEBA-22F9-49E6-B652-254C38727D5E}"
+	ProjectSection(SolutionItems) = preProject
+		..\Build\docker\build_server.docker = ..\Build\docker\build_server.docker
+		..\Build\docker\timetracking.docker = ..\Build\docker\timetracking.docker
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF93A262-D7EE-4072-A31A-2ED73E89F388}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF93A262-D7EE-4072-A31A-2ED73E89F388}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF93A262-D7EE-4072-A31A-2ED73E89F388}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF93A262-D7EE-4072-A31A-2ED73E89F388}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CC83CFF-B4C9-4084-B465-7ACDB30BE66A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CC83CFF-B4C9-4084-B465-7ACDB30BE66A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CC83CFF-B4C9-4084-B465-7ACDB30BE66A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CC83CFF-B4C9-4084-B465-7ACDB30BE66A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D782C5A1-448F-404C-965D-2407DF585006}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D782C5A1-448F-404C-965D-2407DF585006}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D782C5A1-448F-404C-965D-2407DF585006}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D782C5A1-448F-404C-965D-2407DF585006}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7309F57-C6D4-4AEA-BDF7-95443393A93B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7309F57-C6D4-4AEA-BDF7-95443393A93B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7309F57-C6D4-4AEA-BDF7-95443393A93B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7309F57-C6D4-4AEA-BDF7-95443393A93B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D00442CC-5225-4F36-B4C4-A6CECF6A6FCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D00442CC-5225-4F36-B4C4-A6CECF6A6FCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D00442CC-5225-4F36-B4C4-A6CECF6A6FCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D00442CC-5225-4F36-B4C4-A6CECF6A6FCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5DEC073-72E6-4E5E-B036-A341F15E9866}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5DEC073-72E6-4E5E-B036-A341F15E9866}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5DEC073-72E6-4E5E-B036-A341F15E9866}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5DEC073-72E6-4E5E-B036-A341F15E9866}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A5BB14C-4B55-45D9-9129-156EEE1AA7BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A5BB14C-4B55-45D9-9129-156EEE1AA7BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A5BB14C-4B55-45D9-9129-156EEE1AA7BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A5BB14C-4B55-45D9-9129-156EEE1AA7BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57FB49AA-2C3F-4583-B2B8-CF92FC1B8161}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57FB49AA-2C3F-4583-B2B8-CF92FC1B8161}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57FB49AA-2C3F-4583-B2B8-CF92FC1B8161}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57FB49AA-2C3F-4583-B2B8-CF92FC1B8161}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E9A7492-72BC-47B9-B1F4-8E485453C077}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E9A7492-72BC-47B9-B1F4-8E485453C077}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E9A7492-72BC-47B9-B1F4-8E485453C077}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E9A7492-72BC-47B9-B1F4-8E485453C077}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2871F13-0E8F-4C0D-94E3-0500DE3B55B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2871F13-0E8F-4C0D-94E3-0500DE3B55B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2871F13-0E8F-4C0D-94E3-0500DE3B55B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2871F13-0E8F-4C0D-94E3-0500DE3B55B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2205F08B-B25B-4421-BF77-F0CF71190155}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2205F08B-B25B-4421-BF77-F0CF71190155}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2205F08B-B25B-4421-BF77-F0CF71190155}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2205F08B-B25B-4421-BF77-F0CF71190155}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B5F5086-3FB2-4C35-9DF7-789549261065}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B5F5086-3FB2-4C35-9DF7-789549261065}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B5F5086-3FB2-4C35-9DF7-789549261065}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B5F5086-3FB2-4C35-9DF7-789549261065}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4FD20E4-C582-46FD-8A37-D629A61BC5A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4FD20E4-C582-46FD-8A37-D629A61BC5A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4FD20E4-C582-46FD-8A37-D629A61BC5A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4FD20E4-C582-46FD-8A37-D629A61BC5A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB90948D-4ED3-4615-AA3C-1072ABA06185}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB90948D-4ED3-4615-AA3C-1072ABA06185}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB90948D-4ED3-4615-AA3C-1072ABA06185}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB90948D-4ED3-4615-AA3C-1072ABA06185}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A2F6DFB-637D-41B5-9C11-D548EE12ADC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A2F6DFB-637D-41B5-9C11-D548EE12ADC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A2F6DFB-637D-41B5-9C11-D548EE12ADC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A2F6DFB-637D-41B5-9C11-D548EE12ADC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50A2E279-542E-4C00-BC1F-4EFFB9B9B27E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50A2E279-542E-4C00-BC1F-4EFFB9B9B27E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50A2E279-542E-4C00-BC1F-4EFFB9B9B27E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50A2E279-542E-4C00-BC1F-4EFFB9B9B27E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0CC83CFF-B4C9-4084-B465-7ACDB30BE66A} = {A5A54A2E-518C-4EF3-85F0-EE957DA73D79}
+		{D00442CC-5225-4F36-B4C4-A6CECF6A6FCE} = {A5A54A2E-518C-4EF3-85F0-EE957DA73D79}
+		{2205F08B-B25B-4421-BF77-F0CF71190155} = {A5A54A2E-518C-4EF3-85F0-EE957DA73D79}
+		{E4FD20E4-C582-46FD-8A37-D629A61BC5A1} = {A5A54A2E-518C-4EF3-85F0-EE957DA73D79}
+		{2A2F6DFB-637D-41B5-9C11-D548EE12ADC1} = {A5A54A2E-518C-4EF3-85F0-EE957DA73D79}
+		{4D7C624D-9B5A-4AA3-A63F-8775241D2EF0} = {4F2876AD-723A-42E6-9FB3-CE1FB650866E}
+		{2882B4C3-3E9C-4B84-91DA-9DD76DFEA969} = {4F2876AD-723A-42E6-9FB3-CE1FB650866E}
+		{DA46FC64-FEE4-44E9-A914-FF4DD9A4D6A8} = {4F2876AD-723A-42E6-9FB3-CE1FB650866E}
+		{8596EEBA-22F9-49E6-B652-254C38727D5E} = {4F2876AD-723A-42E6-9FB3-CE1FB650866E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E05ED8E8-FD3C-488B-B215-FF32A6BE7EBC}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="../../Build/targets/tests.props" />
+  <ItemGroup>
+    <PackageReference Include="Plainquire.Filter.Newtonsoft" Version="5.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FS.TimeTracking.Application\FS.TimeTracking.Application.csproj" />
+    <ProjectReference Include="..\FS.TimeTracking.Repository.Sqlite\FS.TimeTracking.Repository.Sqlite.csproj" />
+    <ProjectReference Include="..\FS.TimeTracking.Repository.SqlServer\FS.TimeTracking.Repository.SqlServer.csproj" />
+    <ProjectReference Include="..\FS.TimeTracking.Repository\FS.TimeTracking.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

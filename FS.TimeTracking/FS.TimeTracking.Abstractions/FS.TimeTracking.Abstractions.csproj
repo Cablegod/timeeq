@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="../../Build/targets/net_core.props" />
+  <Import Project="../../Build/targets/version.props" />
+  <Import Project="../../Build/targets/xml_documentation.props" />
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Plainquire.Filter.Abstractions" Version="5.0.1" />
+    <PackageReference Include="File.TypeChecker" Version="4.1.1" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="3.1.4" />
+  </ItemGroup>
+
+</Project>

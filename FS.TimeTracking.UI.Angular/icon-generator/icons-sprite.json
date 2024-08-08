@@ -1,0 +1,12 @@
+{
+  "mode": {
+    "stack": {
+      "dest": "modules/assets",
+      "sprite": "icons.svg"
+    }
+  },
+  "svg": {
+    "namespaceClassnames": false,
+    "xmlDeclaration": false
+  }
+}

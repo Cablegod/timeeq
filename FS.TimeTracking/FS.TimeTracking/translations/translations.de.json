@@ -1,0 +1,504 @@
+{
+  "Common": {
+    "True": "wahr",
+    "False": "falsch",
+    "New": "Neu",
+    "Save": "Speichern",
+    "Close": "Schließen",
+    "Cancel": "Abbrechen",
+    "Delete": "Löschen",
+    "Edit": "Bearbeiten",
+    "Action": "Aktion",
+    "Expand": "Aufklappen",
+    "Collapse": "Reduzieren",
+    "Details": "Details",
+    "Yes": "Ja",
+    "No": "Nein",
+    "Total": "Summe",
+    "Optional": "optional",
+    "OptionalShort": "opt."
+  },
+  "Language": {
+    "Title": "{$LANGUAGE}",
+    "de": "Deutsch",
+    "en": "Englisch"
+  },
+  "Abbreviations": {
+    "Hours": "h",
+    "Minutes": "m",
+    "Days": "Tage",
+    "CalendarWeek": "KW"
+  },
+  "Page": {
+    "Timesheet": {
+      "Title": "Zeiterfassung",
+      "ShowDetails": "Details anzeigen",
+      "New": "Neuer Eintrag",
+      "Edit": "Eintrag bearbeiten",
+      "Start": "Starten",
+      "Delete": "Eintrag löschen",
+      "DeleteMessage": "Wollen Sie diesen Eintrag wirklich löschen? Dies kann nicht rückgängig gemacht werden.",
+      "OmittedEntities": "{$OMITTED} weitere Einträge werden zur Vermeidung von Leistungsproblemen nicht angezeigt."
+    },
+    "Chart": {
+      "Title": "Charts",
+      "Common": {
+        "Worked": "geleistet",
+        "Planned": "geplant",
+        "Left": "verbleiben",
+        "OverbookedBy": "überbucht um",
+        "DaysWorked": "Tage geleistet",
+        "DaysPlanned": "Tage geplant",
+        "DaysLeft": "Tage verbleiben",
+        "PercentageOfTotalTime": "Anteil d. Gesamtzeit",
+        "Percentage": "%",
+        "PartialPlannedValues": "Der Auftragszeitraum ist größer als der ausgewählte Zeitraum. Die Werte werden anteilig dargestellt."
+      },
+      "Customers": {
+        "Title": "Soll / Ist nach Kunde",
+        "NoCustomerOverbooked": "Kein Kunde überbucht",
+        "CustomerOverbooked": "{$COUNT} Kunde überbucht",
+        "CustomersOverbooked": "{$COUNT} Kunden überbucht"
+      },
+      "Orders": {
+        "Title": "Soll / Ist nach Auftrag",
+        "NoOrderOverbooked": "Kein Auftrag überbucht",
+        "OrderOverbooked": "{$COUNT} Auftrag überbucht",
+        "OrdersOverbooked": "{$COUNT} Aufträge überbucht"
+      },
+      "Projects": {
+        "Title": "Nach Projekt"
+      },
+      "Activities": {
+        "Title": "Nach Tätigkeit"
+      },
+      "Issues": {
+        "Title": "Nach Ticket"
+      }
+    },
+    "Report": {
+      "Title": "Reports",
+      "Activity": {
+        "Title": "Tätigkeitsnachweis",
+        "TitleDaily": "Tätigkeitsnachweis",
+        "TitleDetailed": "Tätigkeitsnachweis (detailiert)",
+        "Company": "Firma",
+        "Department": "Abteilung",
+        "Contact": "Ansprechpartner",
+        "ServiceProvider": "Dienstleister",
+        "Id": "Id",
+        "StartDate": "Von",
+        "EndDate": "Bis",
+        "Comment": "Kommentar",
+        "Issue": "Ticket",
+        "Customer": "Kunde",
+        "Project": "Projekt",
+        "WithoutProject": "Ohne Projektbezug",
+        "Activity": "Tätigkeit",
+        "Order": "Auftrag",
+        "OrderNumber": "Auftragsnummer",
+        "Billable": "verrechenbar",
+        "Period": "Zeitraum",
+        "Duration": "Dauer",
+        "Hours": "Stunden",
+        "Total": "Summe",
+        "ServiceConfirmation": "Leistungsbestätigung",
+        "Preview": "Vorschau",
+        "PreviewPages": "{$PAGES} von {$TOTAL} Seiten",
+        "NoActivityReports": "Keine Tätigkeitsnachweise verfügbar",
+        "Download": "Download"
+      },
+      "ActivityOverview": {
+        "Title": "Übersicht",
+        "Customer": "Kunde",
+        "WorkedTime": "Arbeitszeit",
+        "Revenue": "Umsatz",
+        "Download": "Download",
+        "ActivityReport": "Tätigkeitsnachweis",
+        "ActivityReportDetailed": "Detailiert"
+      }
+    },
+    "MasterData": {
+      "Title": "Stammdaten",
+      "Customers": {
+        "Title": "Kunden",
+        "New": "Neuer Kunde",
+        "Edit": "Kunde bearbeiten",
+        "Delete": "Kunde löschen",
+        "DeleteMessage": "Wollen Sie diesen Kunden wirklich löschen? Dies kann nicht rückgängig gemacht werden."
+      },
+      "Projects": {
+        "Title": "Projekte",
+        "New": "Neues Projekt",
+        "Edit": "Projekt bearbeiten",
+        "Delete": "Projekt löschen",
+        "DeleteMessage": "Wollen Sie dieses Projekt wirklich löschen? Dies kann nicht rückgängig gemacht werden."
+      },
+      "Activities": {
+        "Title": "Tätigkeiten",
+        "New": "Neue Tätigkeit",
+        "Edit": "Tätigkeit bearbeiten",
+        "Delete": "Tätigkeit löschen",
+        "DeleteMessage": "Wollen Sie diese Tätigkeit wirklich löschen? Dies kann nicht rückgängig gemacht werden."
+      },
+      "Orders": {
+        "Title": "Aufträge",
+        "New": "Neuer Auftrag",
+        "Edit": "Auftrag bearbeiten",
+        "Delete": "Auftrag löschen",
+        "DeleteMessage": "Wollen Sie diesen Auftrag wirklich löschen? Dies kann nicht rückgängig gemacht werden."
+      },
+      "Holidays": {
+        "Title": "Urlaub",
+        "Import": "Import",
+        "New": "Neuer Urlaub",
+        "Edit": "Urlaub bearbeiten",
+        "Delete": "Urlaub löschen",
+        "DeleteMessage": "Wollen Sie diesen Urlaub wirklich löschen? Dies kann nicht rückgängig gemacht werden."
+      }
+    },
+    "Administration": {
+      "Title": "Administration",
+      "Settings": {
+        "Title": "Einstellungen",
+        "WorkTime": "Arbeitszeit",
+        "Workdays": "Arbeitstage",
+        "TimeZone": "Zeitzone",
+        "Company": "Firma",
+        "LogoPreview": "Vorschau"
+      },
+      "Users": {
+        "Title": "Benutzer",
+        "New": "Neuer Benutzer",
+        "Edit": "Benutzer bearbeiten",
+        "Delete": "Benutzer löschen",
+        "DeleteMessage": "Wollen Sie diesen Benutzer wirklich löschen? Dies kann nicht rückgängig gemacht werden.",
+        "PermissionGroups": {
+          "data": "Daten",
+          "time-sheet": "Zeiterfassung",
+          "chart": "Chart",
+          "master-data": "Stammdaten",
+          "report": "Report",
+          "administration": "Administration"
+        },
+        "Permissions": {
+          "foreign-data": "Daten anderer Benutzer",
+          "time-sheet": "Zeiten",
+          "charts-by-customer": "Soll / Ist nach Kunde",
+          "charts-by-order": "Soll / Ist nach Auftrag",
+          "charts-by-project": "Nach Projekt",
+          "charts-by-activity": "Nach Tätigkeit",
+          "charts-by-issue": "Nach Ticket",
+          "report-activity-summary": "Tätigkeitsnachweis",
+          "report-activity-detail": "Tätigkeitsnachweis (detailiert)",
+          "report-activity-raw-data": "Rohdaten",
+          "master-data-customers": "Kunden",
+          "master-data-projects": "Projekte",
+          "master-data-activities": "Tätigkeiten",
+          "master-data-orders": "Aufträge",
+          "master-data-holidays": "Urlaub",
+          "administration-users": "Benutzer",
+          "administration-settings": "Einstellungen",
+          "administration-maintenance": "Wartung"
+        }
+      }
+    },
+  },
+  "Component": {
+    "Header": {
+      "NoDays": "keine",
+      "DaysWorked": "Tage gearbeitet",
+      "Workdays": "Arbeitstage",
+      "VacationDays": "Urlaubstage",
+      "PastDays": "vergangene {$COUNT} Tage",
+      "PastWeeks": "vergangene {$COUNT} Wochen",
+      "PastMonths": "vergangene {$COUNT} Monate",
+      "PastYears": "vergangene {$COUNT} Jahre"
+    },
+    "Authorization": {
+      "Login": "Login",
+      "Logout": "Logout",
+      "UserAccount": "Nutzerkonto"
+    },
+    "Filter": {
+      "Title": "Einstellungen & Filter",
+      "Add": "Filter hinzufügen",
+      "Apply": "Filter anwenden",
+      "Reset": "Filter zurücksetzten",
+      "LimitPeriod": "Zeitraum eingrenzen",
+      "From": "von",
+      "To": "bis",
+      "Start": "Beginn",
+      "End": "Ende",
+      "Customer": "Kunde",
+      "CustomerNumber": "Nummer",
+      "CustomerCompanyName": "Firma",
+      "Project": "Projekt",
+      "Activity": "Tätigkeit",
+      "Order": "Auftrag",
+      "HolidayTitle": "Titel",
+      "HolidayType": "Typ",
+      "Issue": "Ticket",
+      "Comment": "Kommentar",
+      "Hidden": "versteckt",
+      "Billable": "verrechenbar",
+      "Username": "Benutzername",
+      "FirstName": "Vorname",
+      "LastName": "Nachname",
+      "Email": "E-Mail"
+    },
+    "NgSelect": {
+      "AddTagText": "Element hinzufügen",
+      "LoadingText": "Lade...",
+      "ClearAllText": "Alle löschen",
+      "NotFoundText": "Keine Einträge gefunden",
+      "TypeToSearchText": "Zum Suchen tippen"
+    },
+    "ChartTotals": {
+      "OfDays": "von {$OFDAYS}",
+      "OfTotalTime": "der Gesamtzeit",
+      "DaysWorked": "Tage geleistet",
+      "DaysPlanned": "Tage geplant",
+      "DaysPlannedLeft": "geplanten Tage übrig",
+      "WorkdaysLeft": "Arbeitstagen übrig",
+      "PinTableRow": "Bitte eine Zeile in der Tabelle anpinnen!",
+      "Worked": "geleistet",
+      "Planned": "geplant",
+      "Left": "verbleiben",
+      "Percentage": "%",
+      "Other": "Sonstige"
+    }
+  },
+  "Enum": {
+    "ErrorCode": {
+      "Unknown": "Ein unbekannter Fehler ist aufgetreten",
+      "BadRequest": null,
+      "Unauthorized": "Der Zugriff auf die Daten erfordert eine Authentifizierung",
+      "Forbidden": "Der Zugriff auf die Daten ist nicht authorisiert",
+      "NotFound": "Der Datensatz konnte nicht gefunden werden",
+      "Conflict": null,
+      "InternalServerError": "Ein interner Serverfehler ist aufgetreten",
+      "BadRequestConformityViolation": "Der Datensatz entspricht nicht seinen Konformitätsregeln",
+      "ForbiddenForeignUserData": "Der Zugriff auf Daten anderer Benutzer ist nicht authorisiert",
+      "ConflictForeignKeyViolation": "Die Anfrage steht in Konflikt mit anderen Daten",
+      "ConflictForeignKeyViolationOnDelete": "Der Datensatz konnte nicht gelöscht werden, weil andere Daten von ihm abhängen",
+      "ConflictActivityAlreadyAssignedToDifferentCustomers": "Die Tätigkeit ist bereits Stundenzetteln mit abweichenden Kunden zugeordnet",
+      "ConflictActivityAlreadyAssignedToDifferentProjects": "Die Tätigkeit ist bereits Stundenzetteln mit abweichenden Projekten zugeordnet",
+      "ConflictUserWithSameUsernameExists": "Ein Benutzer mit gleichem Benutzernamen oder gleicher E-Mailadresse existiert bereits",
+      "ConflictUserNotAllowedToDeleteItself": "Ein Benutzer darf sich nicht selbst löschen",
+      "ConflictUserNotAllowedToRemoveUserEditPermissionFromItself": "Ein Benutzer darf sich selbst nicht die Berechtigung zum Bearbeiten von Benutzern entziehen"
+    },
+    "HolidayType": {
+      "Holiday": "Urlaub",
+      "PublicHoliday": "Feiertag"
+    },
+    "PermissionScope": {
+      "None": "Keine",
+      "View": "Anzeigen",
+      "Manage": "Bearbeiten"
+    }
+  },
+  "DTO": {
+    "TimeSheetDto": {
+      "StartDate": "Startdatum",
+      "StartTime": "Startzeit",
+      "EndDate": "Enddatum",
+      "EndTime": "Endzeit",
+      "Start": "Beginn",
+      "End": "Ende",
+      "CustomerId": "Kunde",
+      "CustomerIdPlaceholder": "Kunden auswählen",
+      "ProjectId": "Projekt",
+      "ProjectIdPlaceholder": "Projekt auswählen",
+      "ActivityId": "Tätigkeit",
+      "ActivityIdPlaceholder": "Tätigkeit auswählen",
+      "OrderId": "Auftrag",
+      "Issue": "Ticket",
+      "UserId": "Benutzer",
+      "UserIdPlaceholder": "Benutzer auswählen",
+      "Billable": "verrechenbar",
+      "Comment": "Kommentar"
+    },
+    "TimeSheetGridDto": {
+      "Date": "Datum",
+      "StartDate": "Von",
+      "EndDate": "Bis",
+      "Now": "jetzt",
+      "Time": "Zeit",
+      "Duration": "Dauer",
+      "Customer": "Kunde",
+      "Project": "Projekt",
+      "Activity": "Tätigkeit",
+      "Billable": "verrechenbar",
+      "Issue": "Ticket",
+      "Comment": "Kommentar"
+    },
+    "CustomerDto": {
+      "Title": "Titel",
+      "TitlePlaceholder": "Name des Kunden",
+      "Number": "Kundennummer",
+      "CompanyName": "Firma",
+      "Department": "Abteilung",
+      "Street": "Straße",
+      "ZipCode": "PLZ",
+      "City": "Ort",
+      "Country": "Land",
+      "ContactName": "Kontakt",
+      "HourlyRate": "Stundensatz",
+      "Comment": "Kommentar",
+      "Hidden": "versteckt"
+    },
+    "CustomerGridDto": {
+      "Title": "Titel",
+      "CompanyName": "Firma",
+      "ContactName": "Kontakt",
+      "Hidden": "versteckt"
+    },
+    "ProjectDto": {
+      "Title": "Titel",
+      "TitlePlaceholder": "Name des Projektes",
+      "CustomerId": "Kunde",
+      "CustomerIdPlaceholder": "Kunde auswählen",
+      "Comment": "Kommentar",
+      "Hidden": "versteckt"
+    },
+    "ProjectGridDto": {
+      "Title": "Titel",
+      "CustomerTitle": "Kunde",
+      "Hidden": "versteckt"
+    },
+    "ActivityDto": {
+      "Title": "Titel",
+      "TitlePlaceholder": "Name der Tätigkeit",
+      "CustomerId": "Kunde",
+      "Customer": "Kunde",
+      "ProjectId": "Projekt",
+      "Project": "Projekt",
+      "Comment": "Kommentar",
+      "Hidden": "versteckt"
+    },
+    "ActivityGridDto": {
+      "Title": "Titel",
+      "ProjectTitle": "Projekt",
+      "CustomerTitle": "Kunde"
+    },
+    "OrderDto": {
+      "Title": "Titel",
+      "TitlePlaceholder": "Name des Auftrags",
+      "Description": "Beschreibung",
+      "Number": "Auftragsnummer",
+      "CustomerId": "Kunde",
+      "CustomerIdPlaceholder": "Kunde auswählen",
+      "StartDate": "Startdatum",
+      "StartDatePlaceholder": "Beginn",
+      "DueDate": "Fälligkeitsdatum",
+      "DueDatePlaceholder": "fällig",
+      "HourlyRate": "Stundensatz",
+      "Budget": "Budget",
+      "Comment": "Kommentar",
+      "Hidden": "versteckt"
+    },
+    "OrderGridDto": {
+      "Title": "Titel",
+      "CustomerTitle": "Kunde",
+      "StartDate": "Startdatum",
+      "DueDate": "Fälligkeitsdatum",
+      "Hidden": "versteckt"
+    },
+    "WorkTimeDto": {
+      "OrderTitle": "Auftrag",
+      "OrderNumber": "Auftragsnummer",
+      "CustomerTitle": "Kunde",
+      "ProjectTitle": "Projekt",
+      "ActivityTitle": "Tätigkeit",
+      "Issue": "Ticket",
+      "DaysWorked": "geleistete Tage",
+      "DaysPlanned": "geplante Tage",
+      "DaysDifference": "Differenz in Tagen",
+      "TimeWorked": "geleistete Zeit",
+      "TimePlanned": "geplante Zeit",
+      "TimeDifference": "Zeitdifferenz",
+      "BudgetWorked": "Budget verwendet",
+      "BudgetPlanned": "Budget geplant",
+      "BudgetDifference": "Budget übrig",
+      "TotalWorkedPercentage": "gearbeitet %",
+      "TotalPlannedPercentage": "geplant %",
+      "PlannedStart": "Geplant von",
+      "PlannedEnd": "Geplant bis",
+      "OrderPeriod": "Auftragszeitraum",
+      "HourlyRate": "Stundensatz",
+      "Currency": "Währung"
+    },
+    "HolidayDto": {
+      "Title": "Titel",
+      "TitlePlaceholder": "Titel",
+      "StartDate": "Startdatum",
+      "StartDatePlaceholder": "Beginn",
+      "EndDate": "Enddatum",
+      "EndDatePlaceholder": "Ende",
+      "Type": "Typ",
+      "UserId": "Benutzer"
+    },
+    "HolidayGridDto": {
+      "Title": "Titel",
+      "StartDate": "Startdatum",
+      "EndDate": "Enddatum",
+      "Type": "Typ",
+      "Username": "Benutzer"
+    },
+    "HolidayImportDto": {
+      "File": "iCal-Datei",
+      "Type": "Typ"
+    },
+    "UserDto": {
+      "Username": "Benutzername",
+      "FirstName": "Vorname",
+      "LastName": "Nachname",
+      "Email": "E-Mail",
+      "Enabled": "Aktiviert",
+      "Password": "Passwort",
+      "ConfirmPassword": "Passwort bestätigen",
+      "Permissions": "Berechtigungen",
+      "Scope": "Scope",
+      "RestrictToCustomerIds": "Beschränke auf Kunden"
+    },
+    "SettingDto": {
+      "WorkHoursPerWorkday": "Arbeitsstunden / Werktag",
+      "WorkHoursPerWorkdayDate": "Arbeitsstunden / Werktag",
+      "Monday": "Montag",
+      "Tuesday": "Dienstag",
+      "Wednesday": "Mittwoch",
+      "Thursday": "Donnerstag",
+      "Friday": "Freitag",
+      "Saturday": "Samstag",
+      "Sunday": "Sonntag",
+      "ClientTimeZoneId": "Zeitzone des Clients",
+      "ClientTimeZoneIdPlaceholder": "Zeitzone auswählen",
+      "Company": "Firmenname",
+      "Department": "Abteilung",
+      "Currency": "Währung",
+      "ServiceProvider": "Name des Dienstleisters",
+      "Street": "Straße",
+      "AddressAddition": "Adresszusatz",
+      "ZipCode": "Postleitzahl",
+      "City": "Stadt",
+      "Country": "Land",
+      "Logo": "Logo"
+    }
+  },
+  "Validation": {
+    "RequiredWithField": "'{$FIELDNAME}' ist erforderlich",
+    "InvalidWithField": "'{$FIELDNAME}' ist ungültig",
+    "MinLengthWithField": "'{$FIELDNAME}' muss mindesten {$VALUE} Zeichen haben",
+    "MaxLengthWithField": "'{$FIELDNAME}' darf nicht mehr als {$VALUE} Zeichen haben",
+    "MinWithField": "'{$FIELDNAME}' muss größer oder gleich {$VALUE} sein",
+    "MaxWithField": "'{$FIELDNAME}' muss kleiner oder gleich {$VALUE} sein",
+    "CompareWithField": "'{$FIELDNAME}' und '{$OTHERFIELDNAME}' stimmen nicht überein",
+    "CompareToEqualWithField": "'{$FIELDNAME}' und '{$OTHERFIELDNAME}' müssen gleich sein",
+    "CompareToNotEqualWithField": "'{$FIELDNAME}' und '{$OTHERFIELDNAME}' dürfen nicht gleich sein",
+    "CompareToLessThanWithField": "'{$FIELDNAME}' muss kleiner als '{$OTHERFIELDNAME}' sein",
+    "CompareToLessThanOrEqualWithField": "'{$FIELDNAME}' muss kleiner oder gleich '{$OTHERFIELDNAME}' sein",
+    "CompareToGreaterThanWithField": "'{$FIELDNAME}' muss größer als '{$OTHERFIELDNAME}' sein",
+    "CompareToGreaterThanOrEqualWithField": "'{$FIELDNAME}' muss größer oder gleich '{$OTHERFIELDNAME}' sein"
+  }
+}

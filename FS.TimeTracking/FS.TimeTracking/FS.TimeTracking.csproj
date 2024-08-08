@@ -1,0 +1,99 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <Import Project="../../Build/targets/net_core.props" />
+  <Import Project="../../Build/targets/version.props" />
+  <Import Project="../../Build/targets/xml_documentation.props" />
+
+  <ItemGroup>
+    <Content Remove="translations\translations.de.json" />
+    <Content Remove="translations\translations.en.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Build\services\linux.service.template" Link="services\linux.service.template">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\Build\services\windows.service.install.bat" Link="services\windows.service.install.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\Build\services\windows.service.uninstall.bat" Link="services\windows.service.uninstall.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="translations\translations.de.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="translations\translations.en.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="8.0.4" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Systemd" Version="8.0.0" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="5.3.10" />
+    <PackageReference Include="Mono.Options" Version="6.12.0.148" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Schick.Authentication.OneTimeToken" Version="1.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FS.TimeTracking.Abstractions\FS.TimeTracking.Abstractions.csproj" />
+    <ProjectReference Include="..\FS.TimeTracking.Api.REST\FS.TimeTracking.Api.REST.csproj" />
+    <ProjectReference Include="..\FS.TimeTracking.Application\FS.TimeTracking.Application.csproj" />
+    <ProjectReference Include="..\FS.TimeTracking.Keycloak\FS.TimeTracking.Keycloak.csproj" />
+    <ProjectReference Include="..\FS.TimeTracking.Repository.MySql\FS.TimeTracking.Repository.MySql.csproj" />
+    <ProjectReference Include="..\FS.TimeTracking.Repository.PostgreSql\FS.TimeTracking.Repository.PostgreSql.csproj" />
+    <ProjectReference Include="..\FS.TimeTracking.Repository.Sqlite\FS.TimeTracking.Repository.Sqlite.csproj" />
+    <ProjectReference Include="..\FS.TimeTracking.Repository.SqlServer\FS.TimeTracking.Repository.SqlServer.csproj" />
+    <ProjectReference Include="..\FS.TimeTracking.Repository\FS.TimeTracking.Repository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="config\FS.TimeTracking.config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="config\FS.TimeTracking.config.Development.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </Content>
+    <None Update="config\FS.TimeTracking.config.nlog">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="database\" />
+    <Folder Include="services\" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <AngularDirectory>../../FS.TimeTracking.UI.Angular</AngularDirectory>
+    <ApiGeneratorDirectory>$(AngularDirectory)/openapi-generator</ApiGeneratorDirectory>
+  </PropertyGroup>
+
+  <Target Name="DetectIfRuntimeSpecificBuild" AfterTargets="AfterBuild" Condition="$(RuntimeIdentifier) != '' OR $(RuntimeIdentifiers) != ''">
+    <PropertyGroup>
+      <IsRuntimeSpecific>true</IsRuntimeSpecific>
+    </PropertyGroup>
+  </Target>
+
+  <Target Name="GenerateOpenApiSpec" AfterTargets="AfterBuild" Condition="$(IsRuntimeSpecific) != true">
+    <Exec Command="dotnet &quot;$(OutputPath)$(AssemblyName).dll&quot; --generate-openapi $(TargetName).openapi.json --TimeTracking:Features:Reporting=true --TimeTracking:Features:Authorization=true" />
+  </Target>
+
+  <Target Name="GenerateAngularApiClient" AfterTargets="AfterBuild" Condition="$(IsRuntimeSpecific) != true">
+    <Message Importance="High" Text="../node_modules/.bin/openapi-generator-cli generate -c config.json -g typescript-angular --template-dir templates/typescript-angular --import-mappings=DateTime=luxon,Duration=luxon --type-mappings=DateTime=DateTime,date-span=Duration -i $(ProjectDir)$(TargetName).openapi.json -o $(AngularDirectory)/modules/api/timetracking" />
+    <Exec WorkingDirectory="$(ApiGeneratorDirectory)" Command="../node_modules/.bin/openapi-generator-cli generate -c config.json -g typescript-angular --template-dir templates/typescript-angular --import-mappings=DateTime=luxon,Duration=luxon --type-mappings=DateTime=DateTime,date-span=Duration -i $(ProjectDir)$(TargetName).openapi.json -o $(AngularDirectory)/modules/api/timetracking" />
+    <Message Importance="High" Text="node openapi-generator-fix-shortcoming.js $(AngularDirectory)/modules/api/timetracking" />
+    <Exec WorkingDirectory="$(ApiGeneratorDirectory)" Command="node openapi-generator-fix-shortcoming.js $(AngularDirectory)/modules/api/timetracking" />
+  </Target>
+
+  <Target Name="GenerateValidationSpec" AfterTargets="AfterBuild" Condition="$(IsRuntimeSpecific) != true">
+    <Message Importance="High" Text="dotnet &quot;$(OutputPath)$(AssemblyName).dll&quot; --generate-validation $(AngularDirectory)/modules/core/app/services/form-validation/dto-validations.spec.json" />
+    <Exec Command="dotnet &quot;$(OutputPath)$(AssemblyName).dll&quot; --generate-validation $(AngularDirectory)/modules/core/app/services/form-validation/dto-validations.spec.json" />
+  </Target>
+
+</Project>

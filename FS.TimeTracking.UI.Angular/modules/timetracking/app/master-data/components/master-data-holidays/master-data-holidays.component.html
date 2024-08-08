@@ -1,0 +1,72 @@
+<div class="row">
+  <!-- Master data -->
+  <div class="col-12 col-md-8 col-xl-9 order-last order-md-first timesheet px-4">
+    <ng-container *ngTemplateOutlet="masterData"></ng-container>
+  </div>
+  <div class="col-12 col-md-4 col-xl-3 order-first order-md-last ps-md-2 ps-lg-5 pb-5 pb-md-0 filter">
+    <!-- Filter -->
+    <ts-filter filterId="filterTimeSheet"
+               [filters]="filters">
+    </ts-filter>
+  </div>
+</div>
+
+<ng-template #masterData>
+  <div class="d-flex justify-content-between align-items-start mb-2">
+    <h4 i18n="@@Page.MasterData.Holidays.Title">
+      [i18n] Holidays
+    </h4>
+    <div>
+      <button type="button" class="btn btn-secondary me-3" [routerLink]="'import'" [disabled]="createNewDisabled">
+        <ng-container i18n="@@Page.MasterData.Holidays.Import">[i18n] Import</ng-container>
+      </button>
+      <button type="button" class="btn btn-primary" [routerLink]="guidService.guidEmpty" [disabled]="createNewDisabled">
+        <ng-container i18n="@@Page.MasterData.Holidays.New">[i18n] New holiday</ng-container>
+      </button>
+    </div>
+  </div>
+
+  <ts-simple-table
+    *ngIf="rows"
+    [columns]="columns"
+    [rows]="rows"
+    [configuration]="configuration">
+  </ts-simple-table>
+</ng-template>
+
+<ng-template #dataCellTemplate let-row="row" let-column="column" let-table="table">
+  <span [ngClass]="{'text-secondary': row.hidden}">
+    {{table.getCellValue(row, column)}}
+  </span>
+</ng-template>
+
+<ng-template #actionCellTemplate let-row="row">
+  <a class="text-secondary me-2"
+     title="[i18n] Edit holiday"
+     i18n-title="@@Page.MasterData.Holidays.Edit"
+     [routerLink]="row.id">
+    <svg class="bi action-icon" fill="currentColor">
+      <use xlink:href="assets/icons.svg#pencil"/>
+    </svg>
+  </a>
+  <ts-simple-confirm
+    title="[i18n] Delete holiday"
+    i18n-title="@@Page.MasterData.Holidays.Delete"
+    message="[i18n] Are you sure you want to delete this holiday?. This cannot be undone."
+    i18n-message="@@Page.MasterData.Holidays.DeleteMessage"
+    actionText="[i18n] Delete Holiday"
+    i18n-actionText="@@Page.MasterData.Holidays.Delete"
+    color="danger"
+    [disabled]="row.isReadonly ?? false"
+    (confirmed)="deleteItem(row.id)">
+    <a class="text-secondary">
+      <svg class="bi action-icon" fill="currentColor">
+        <svg class="bi action-icon" fill="currentColor">
+          <use xlink:href="assets/icons.svg#eraser"/>
+        </svg>
+      </svg>
+    </a>
+  </ts-simple-confirm>
+</ng-template>
+
+<router-outlet></router-outlet>
